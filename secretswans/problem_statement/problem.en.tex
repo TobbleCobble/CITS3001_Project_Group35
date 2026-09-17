@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, hyperref}
+
+\title{\flushleft\textbf{Problem A: Cygnid Cipher} \\[1.0em] \small Group35 problem \textbf{cygnidcypher} - Time limit: 2s \noindent\rule{\textwidth}{0.4pt}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\vspace{-90pt}
+\section*{}
+The Grand Emperor Cygnus has given the command, the Black Swans of the Derbarl Yerrigan shall wage all-out war against the Mallard Ducks for control of the lake's prime bread-crust foraging zones.
+To transmit the strike timing across the river without duck patrols intercepting the message. The swans send their times through a series of squawks (0) and squeeks (1).
+Find the minimum number of squawks and squeeks that a swan must make in order to get their message across
+
+\section*{Input}
+The input consists of a single line containing a non-empty string $S$ ($1 \le |S| \le 10^5$), representing the secret battle strategy. $S$ contains only lowercase English letters (\texttt{a}-\texttt{z}) and spaces.
+
+\section*{Output}
+Output a single integer representing the total bit length of the encoded message.
+
+\section*{Sample Tests}
+
+\subsection*{Sample Input 1}
+\fbox{
+  \begin{minipage}{\textwidth}
+    attack ducks at dawn
+  \end{minipage}%
+}
+
+\subsection*{Sample Output 1}
+
+\fbox{
+  \begin{minipage}{\textwidth}
+    60
+  \end{minipage}%
+}
+
+\subsection*{Sample Output 2}
+\fbox{
+  \begin{minipage}{\textwidth}
+quack no more
+  \end{minipage}%
+}
+
+\subsection*{Sample Output 2}
+\fbox{
+  \begin{minipage}{\textwidth}
+    42
+  \end{minipage}%
+}
+
+\end{document}
