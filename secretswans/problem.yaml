@@ -1,0 +1,31 @@
+problem_format_version: 2026-09
+name:
+  en: Sample problem
+uuid:
+type: pass-fail
+author: Group35
+source: CITS3001 Group35
+source_url:
+license: cc by-sa
+rights_owner: author
+
+limits:
+  time_multipliers:
+    ac_to_time_limit: 2.0
+    time_limit_to_tle: 1.5
+  time_limit: 1.0
+  time_resolution: 1.0
+  memory: 2048
+  output: 8
+  code: 128
+  compilation_time: 60
+  compilation_memory: 2048
+  validation_time: 60
+  validation_memory: 2048
+  validation_output: 8
+
+validation: custom
+
+keywords: [graph, dijkstra]
+
+languages: [c, cpp, java, kotlin, python3]
