@@ -1,0 +1,31 @@
+problem_format_version: 2026-09
+name:
+  en: Pecking Order
+uuid: 00c296a9-57ea-49e0-a0e3-34e8cd1113c9
+type: pass-fail
+author: Group35
+source: CITS3001 Group35
+source_url:
+license: cc by-sa
+rights_owner: author
+
+limits:
+  time_multipliers:
+    ac_to_time_limit: 2.0
+    time_limit_to_tle: 1.5
+  time_limit: 3.0
+  time_resolution: 1.0
+  memory: 2048
+  output: 8
+  code: 128
+  compilation_time: 60
+  compilation_memory: 2048
+  validation_time: 60
+  validation_memory: 2048
+  validation_output: 8
+
+validation: default
+
+keywords: [graph, topological-sort, dag, uniqueness]
+
+languages: [c, cpp, java, kotlin, python3]
