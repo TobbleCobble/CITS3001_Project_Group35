@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, hyperref}
+
+\title{\flushleft\textbf{Problem B: Pecking Order} \\[1.0em] \small Group35 problem \textbf{peckingorder} - Time limit: 3s \noindent\rule{\textwidth}{0.4pt}}
+\date{}
+
+\newcommand{\sampleboxwidth}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+
+\begin{document}
+
+\maketitle
+\vspace{-90pt}
+\section*{}
+Each winter the Black Swans of the Derbarl Yerrigan settle into a strict pecking order. For any two swans, one of them consistently gives way to the other, and the true hierarchy never runs in a circle.
+
+Mira's field team has spent the season logging \emph{displacements}. Each entry records one swan advancing on another and the other giving way, so the first swan outranks the second. The log is far from complete --- the team only recorded the confrontations that happened in front of the hide --- and a busy pair may appear in it many times over. It is also hand-written, so it is not beyond the team to have copied an entry down the wrong way round.
+
+Mira would like the season's ranking, from the most dominant swan to the least. She began by ordering the swans by how many displacements each had won, but the result disagreed with the log in places, so she has asked you for something defensible: the ranking the log actually forces.
+
+Report that ranking, but only if the log forces exactly one. If the log is consistent with more than one ranking, this season's observations were not enough to separate the swans. If it is consistent with no ranking at all, someone has copied an entry down the wrong way round.
+
+\section*{Input}
+The first line contains two integers $N$ and $M$ ($1 \le N \le 2 \cdot 10^5$, $0 \le M \le 2 \cdot 10^5$): the number of swans and the number of logged displacements. Swans are numbered $1$ to $N$.
+
+Each of the next $M$ lines contains two integers $a$ and $b$ ($1 \le a, b \le N$, $a \ne b$), recording that swan $a$ displaced swan $b$, and therefore that $a$ outranks $b$. The same displacement may be logged more than once.
+
+\section*{Output}
+If exactly one ranking is consistent with the log, output the $N$ swan numbers on a single line, separated by single spaces, from most dominant to least dominant.
+
+Otherwise output \texttt{AMBIGUOUS} if more than one ranking is consistent with the log, or \texttt{CONTRADICTORY} if no ranking is.
+
+\section*{Sample Tests}
+
+\subsection*{Sample Input 1}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    4 3 \\
+    3 1 \\
+    1 4 \\
+    4 2
+  \end{minipage}%
+}
+
+\subsection*{Sample Output 1}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    3 1 4 2
+  \end{minipage}%
+}
+
+\subsection*{Sample Input 2}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    3 2 \\
+    1 3 \\
+    2 3
+  \end{minipage}%
+}
+
+\subsection*{Sample Output 2}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    AMBIGUOUS
+  \end{minipage}%
+}
+
+\subsection*{Sample Input 3}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    3 3 \\
+    1 2 \\
+    2 3 \\
+    3 1
+  \end{minipage}%
+}
+
+\subsection*{Sample Output 3}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    CONTRADICTORY
+  \end{minipage}%
+}
+
+\section*{Note}
+Some logs record a chain of $2 \cdot 10^5$ swans. A recursive depth-first search will need its recursion limit raised (in Python, \texttt{sys.setrecursionlimit}), or should be rewritten with an explicit stack.
+
+\end{document}
