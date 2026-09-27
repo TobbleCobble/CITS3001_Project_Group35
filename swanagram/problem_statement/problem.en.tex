@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, hyperref}
+
+\title{\flushleft\textbf{Swanagram} \\[1.0em] \small Group35 problem \textbf{swanagram} - Time limit: 3s \noindent\rule{\textwidth}{0.4pt}}
+\date{}
+
+\newcommand{\sampleboxwidth}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+
+\begin{document}
+
+\maketitle
+\vspace{-90pt}
+\section*{}
+The black swans of the Derbarl Yerrigan have recently become addicted to a new social platform, \textbf{Swanagram}, developed by the infamous Swanerberg. However, this has led to the swans forming numerous \emph{bevies} (groups), where they gossip among themselves and prefer not to interact with other bevies unless it is to pass on gossip or relay it to another bevy.
+
+As a result, Swanagram is beginning to lose its ``social'' aspect, and Swanerberg is determined to get the swans interacting again. To do so, Swanerberg intends to send out a single piece of gossip and wants it to reach as many bevies as possible, so that all the bevies are talking about the same topic. Help him determine the maximum number of bevies the gossip can reach.
+
+Within a bevy, every swan can eventually pass gossip to every other swan in that bevy. Each bevy has a \textbf{Gossip Power}, equal to the number of swans in that bevy.
+
+If a bevy has Gossip Power $g$, it may pass the gossip through at most $g$ bevy-to-bevy connections before another bevy must receive it. Bevies used only as relays do not count as having received the gossip. Once a bevy receives the gossip, its own Gossip Power determines how far the gossip may be passed next.
+
+For example, suppose a bevy with Gossip Power $3$ can pass gossip along the sequence
+\[
+A \rightarrow B \rightarrow C \rightarrow D.
+\]
+It may choose to have $B$, $C$, or $D$ receive the gossip. If $D$ receives it, then $B$ and $C$ act only as relays and do not count as having received the gossip. From that point onward, $D$'s Gossip Power is used.
+
+Swanerberg begins the gossip from his own bevy, which does not count towards the final total.
+
+\section*{Input}
+The first line contains two integers $N$ and $M$ ($1 \le N \le 10^5$, $0 \le M \le 2 \cdot 10^5$): the number of swans and the number of directed gossip connections. Swans are numbered $1$ to $N$.
+
+Each of the next $M$ lines contains two integers $u$ and $v$ ($1 \le u,v \le N$, $u \ne v$), indicating that swan $u$ can directly pass gossip to swan $v$.
+
+Swan $1$ is Swanerberg. Swanerberg is guaranteed to form a bevy by himself.
+
+\section*{Output}
+Output a single integer: the maximum number of bevies, excluding Swanerberg's own bevy, that can receive the gossip.
+
+\section*{Sample Tests}
+
+\subsection*{Sample Input 1}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    7 8 \\
+    1 2 \\
+    2 3 \\
+    3 2 \\
+    3 4 \\
+    4 5 \\
+    5 6 \\
+    4 7 \\
+    7 6
+  \end{minipage}%
+}
+
+\subsection*{Sample Output 1}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    4
+  \end{minipage}%
+}
+
+\subsection*{Sample Input 2}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    4 4 \\
+    1 2 \\
+    2 3 \\
+    3 2 \\
+    3 4
+  \end{minipage}%
+}
+
+\subsection*{Sample Output 2}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    2
+  \end{minipage}%
+}
+
+\section*{Note}
+Some inputs may contain long chains of gossip connections. A recursive depth-first search in Python may require its recursion limit to be raised using \texttt{sys.setrecursionlimit}, or may instead be implemented using an explicit stack.
+
+\end{document}
