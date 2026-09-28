@@ -1,31 +1,21 @@
-problem_format_version: 2026-09
-name:
-  en: Pecking Order
+# Pecking Order -- CITS3001 Advanced Algorithms 2026, Group 35
+# Problem package format: legacy (same layout as the grumpyqueue example).
+name: Pecking Order
 uuid: 00c296a9-57ea-49e0-a0e3-34e8cd1113c9
-type: pass-fail
-author: Group35
-source: CITS3001 Group35
-source_url:
-license: cc by-sa
-rights_owner: author
+author: 35-23669907
+source: CITS3001 Advanced Algorithms 2026 --- Group 35
+license: educational
+rights_owner: 35-23669907
 
+# Time limit: 3 seconds (fixed in .timelimit and domjudge-problem.ini; the legacy
+# format does not allow a time_limit key here). The reference Python solution
+# runs in under 1 s on the largest tests.
 limits:
-  time_multipliers:
-    ac_to_time_limit: 2.0
-    time_limit_to_tle: 1.5
-  time_limit: 3.0
-  time_resolution: 1.0
-  memory: 2048
-  output: 8
-  code: 128
-  compilation_time: 60
-  compilation_memory: 2048
-  validation_time: 60
-  validation_memory: 2048
-  validation_output: 8
+  time_multiplier: 2
+  time_safety_margin: 1.5
+  memory: 1024          # MiB
+  output: 8             # MiB
 
 validation: default
 
-keywords: [graph, topological-sort, dag, uniqueness]
-
-languages: [c, cpp, java, kotlin, python3]
+keywords: graph topological-sort kahn dag cycle-detection uniqueness
