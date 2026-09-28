@@ -11,11 +11,9 @@
 \maketitle
 \vspace{-90pt}
 \section*{}
-It is a bright afternoon on the banks of the Derbarl Yerrigan, and the black swans have decided that today is a feast day. Students are sprawled along the river with their lunches, and the flock means to make off with as many as it can.
+It is a nice afternoon at matlida bay, and the black swans have decided that today is a feast day. Students are sprawled along the river with their lunches, and the flock means to make off with as many as it can.
 
-A swan will snatch a student's lunch --- unless that particular student unnerves it, in which case it keeps a wary distance and leaves that lunch alone. Swans are proud birds: in all the commotion a single swan will carry off at most one lunch, and no lunch is worth squabbling over, so each student's lunch is taken by at most one swan.
-
-For every swan the flock's lookout has noted which students it is too timid to approach. Given those notes, work out the greatest number of lunches the flock can steal between them.
+A swan will snatch a student's lunch unless that particular student intimidates it, in which case it keeps a wary distance and leaves that lunch alone. Swans are only able to carry one lunch in their beaks and cannot take the same lunch.
 
 \section*{Input}
 The first line contains two integers $S$ and $L$ ($1 \le S, L \le 100$): the number of swans and the number of student lunches. Swans are numbered $1$ to $S$ and lunches $1$ to $L$.
@@ -23,7 +21,7 @@ The first line contains two integers $S$ and $L$ ($1 \le S, L \le 100$): the num
 Each of the next $S$ lines describes one swan, in order from swan $1$ to swan $S$. The line begins with the swan's own number, followed by the (distinct) numbers of the students it is too scared to steal from. A line containing only the swan's number means that swan fears no one and could take any lunch.
 
 \section*{Output}
-Output a single integer: the maximum number of lunches the flock can steal, given that each swan takes at most one lunch and each lunch is taken by at most one swan.
+Output a single integer: the most lunches the swans can steal, given that each swan takes at most one lunch and each lunch is taken by at most one swan.
 
 \section*{Sample Tests}
 
