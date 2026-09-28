@@ -1,0 +1,31 @@
+problem_format_version: 2026-09
+name:
+  en: Lunch Stealing
+uuid: 8ebe1a6c-2d7b-4673-8bf3-755b89371033
+type: pass-fail
+author: Hugo
+source: CITS3001 Advanced Algorithms 2026
+source_url:
+license: educational
+rights_owner: author
+
+limits:
+  time_multipliers:
+    ac_to_time_limit: 2.0
+    time_limit_to_tle: 1.5
+  time_limit: 3.0
+  time_resolution: 1.0
+  memory: 2048
+  output: 8
+  code: 128
+  compilation_time: 60
+  compilation_memory: 2048
+  validation_time: 60
+  validation_memory: 2048
+  validation_output: 8
+
+validation: default
+
+keywords: [graph, bipartite-matching, max-flow, ford-fulkerson]
+
+languages: [python3]
