@@ -1,15 +1,3 @@
-"""
-WRONG ANSWER - a cruder greedy than greedy_rescan.py.
-
-It ranks the lunches once, by how many swans could take each at the START, and
-fills the most-contested first in that fixed order. It never updates the counts
-as swans get used, and never reconsiders a choice. Because it works from stale
-information, it strands swans on more instances than the re-evaluating version
-does -- so it is wrong on more of the tests. Still polynomial, so Wrong Answer,
-not Time Limit.
-"""
-
-
 def main():
     S, L = map(int, input().split())
 
@@ -23,7 +11,7 @@ def main():
             if lunch not in feared:
                 can[lunch].add(swan)
 
-    # sort lunches once, fewest possible swans first (static counts)
+    # sort lunches once, fewest possible swans first
     order = sorted(range(1, L + 1), key=lambda lunch: len(can[lunch]))
 
     used_swans = set()
