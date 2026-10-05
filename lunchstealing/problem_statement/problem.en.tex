@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, hyperref}
+
+\title{\flushleft\textbf{Lunch Stealing} \\[1.0em] \small CITS3001 problem \textbf{lunchstealing} - Time limit: 3s \noindent\rule{\textwidth}{0.4pt}}
+\date{}
+
+\newcommand{\sampleboxwidth}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+
+\begin{document}
+
+\maketitle
+\vspace{-90pt}
+\section*{}
+It is a nice afternoon at the Derbarl Yerrigan, and the black swans have decided that today is a feast day. Students are sprawled along the river with their lunches, and the flock means to make off with as many as it can.
+
+A swan will snatch a student's lunch unless that particular student intimidates it, in which case it keeps a wary distance and leaves that lunch alone. Swans are only able to carry one lunch in their beaks and cannot take the same lunch.
+
+\section*{Input}
+The first line contains two integers $S$ and $L$ ($1 \le S, L \le 100$): the number of swans and the number of student lunches. Swans are numbered $1$ to $S$ and lunches $1$ to $L$.
+
+Each of the next $S$ lines describes one swan, in order from swan $1$ to swan $S$. The line begins with the swan's own number, followed by the (distinct) numbers of the students it is too scared to steal from. A line containing only the swan's number means that swan fears no one and could take any lunch.
+
+\section*{Output}
+Output a single integer: the most lunches the swans can steal, given that each swan takes at most one lunch and each lunch is taken by at most one swan.
+
+\section*{Sample Tests}
+
+\subsection*{Sample Input 1}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    3 3 \\
+    1 3 \\
+    2 1 \\
+    3 2
+  \end{minipage}%
+}
+
+\subsection*{Sample Output 1}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    3
+  \end{minipage}%
+}
+
+\noindent Swan 1 fears student 3 (so it may take lunch 1 or 2), swan 2 fears student 1, and swan 3 fears student 2. Assigning swan 1 to lunch 2, swan 2 to lunch 3 and swan 3 to lunch 1 lets all three swans eat.
+
+\subsection*{Sample Input 2}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    3 3 \\
+    1 3 \\
+    2 2 3 \\
+    3 1
+  \end{minipage}%
+}
+
+\subsection*{Sample Output 2}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    3
+  \end{minipage}%
+}
+
+\subsection*{Sample Input 3}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    3 3 \\
+    1 2 3 \\
+    2 2 3 \\
+    3 2 3
+  \end{minipage}%
+}
+
+\subsection*{Sample Output 3}
+\fbox{
+  \begin{minipage}{\sampleboxwidth}
+    \ttfamily
+    1
+  \end{minipage}%
+}
+
+\noindent All three swans are scared of students 2 and 3, so every swan can only approach student 1. Just one of them gets a lunch.
+
+\section*{Note}
+A swan that fears every student, or a lunch that no swan dares approach, is possible.
+
+\end{document}
